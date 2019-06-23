@@ -11,6 +11,7 @@ module.exports = {
         publicPath: '/',
         filename: '[name].js',
     },
+    mode: 'development',
     target: 'web',
     devtool: 'source-map',
     module: {
@@ -47,7 +48,8 @@ module.exports = {
             template: './src/html/index.html',
             filename: './index.html',
             excludeChunks: [ 'server' ]
-        })
+        }),
+        new webpack.NoEmitOnErrorsPlugin()
     ]
 
 }

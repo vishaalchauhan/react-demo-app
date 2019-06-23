@@ -19,6 +19,10 @@
 
 ### 🏠 [Homepage](https://github.com/mskhirwar/express-webpack#readme)
 
+## Prerequisites
+
+- node 8.10.x
+
 ## Install
 
 ```sh

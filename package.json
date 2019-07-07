@@ -14,7 +14,9 @@
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/__mocks__/style-mock.js",
       "\\.(gif|tff|eot|svg)": "<rootDir>/__mocks__/file-mock.js"
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",

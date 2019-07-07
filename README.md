@@ -15,6 +15,8 @@
   </a>
 </p>
 
+[![codecov](https://codecov.io/gh/mskhirwar/express-webpack/branch/master/graph/badge.svg)](https://codecov.io/gh/mskhirwar/express-webpack)
+
 > A basic express and webpack boilerplate example
 
 ### 🏠 [Homepage](https://github.com/mskhirwar/express-webpack#readme)

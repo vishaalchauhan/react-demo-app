@@ -3,7 +3,7 @@ import {Jumbotron, Container} from 'reactstrap'
 
 const Notfound = () => {
     return (
-        <Jumbotron>
+        <Jumbotron className="bg-white">
             <Container>
                 <h1>Page Not found</h1>
             </Container>

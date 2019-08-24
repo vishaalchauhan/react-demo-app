@@ -1,5 +1,5 @@
 {
-  "name": "express-webpack",
+  "name": "react-express-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,15 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mskhirwar/express-webpack.git"
+    "url": "git+https://github.com/mskhirwar/react-express-webpack.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mskhirwar/express-webpack/issues"
+    "url": "https://github.com/mskhirwar/react-express-webpack/issues"
   },
-  "homepage": "https://github.com/mskhirwar/express-webpack#readme",
+  "homepage": "https://github.com/mskhirwar/react-express-webpack#readme",
   "dependencies": {
     "express": "^4.17.1"
   },

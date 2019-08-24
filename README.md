@@ -1,10 +1,10 @@
-<h1 align="center">React Express Webpack 👋</h1>
+<h1 align="center">React Demo App</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/mskhirwar/react-express-webpack#readme">
+  <a href="https://github.com/mskhirwar/react-demo-app#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
-  <a href="https://github.com/mskhirwar/react-express-webpack/graphs/commit-activity">
+  <a href="https://github.com/mskhirwar/react-demo-app/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
   <a href=" ">
@@ -15,11 +15,11 @@
   </a>
 </p>
 
-[![codecov](https://codecov.io/gh/mskhirwar/react-express-webpack/branch/master/graph/badge.svg)](https://codecov.io/gh/mskhirwar/react-express-webpack)
+[![codecov](https://codecov.io/gh/mskhirwar/react-demo-app/branch/master/graph/badge.svg)](https://codecov.io/gh/mskhirwar/react-demo-app)
 
-> A basic react express and webpack boilerplate example
+> A React demo application to configure & run CI/CD pipeline
 
-### 🏠 [Homepage](https://github.com/mskhirwar/react-express-webpack#readme)
+### 🏠 [Homepage](https://github.com/mskhirwar/react-demo-app#readme)
 
 ## Prerequisites
 
@@ -41,6 +41,12 @@ npm run build:dev && npm start
 
 ```sh
 npm run test
+```
+
+## Run code coverage
+
+```sh
+npm run coverage
 ```
 
 ## Author

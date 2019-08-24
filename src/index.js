@@ -1,17 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Message from './js/message'
-import logMessage from './js/logger'
+// import App from './app'
+import logMessage from './utils/logger'
+
+// Router
+import Router from './router'
+
+// Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.css'
 import './css/style.css'
 
 
 // Log message to console
-logMessage('Welcome to Rexpack!')
+logMessage('Welcome to React Demo App!')
 
 ReactDOM.render(
-    <Message />, 
-    document.getElementById('react-container')
+    <Router />, 
+    document.getElementById('app')
 )
 
 // Needed for Hot Module Replacement

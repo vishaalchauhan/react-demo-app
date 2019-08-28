@@ -12,9 +12,11 @@ pipeline {
         git 'https://github.com/nishantkhandelwal/react-demo-app.git'
       }
     }
-    stage('Install dependencies') {
+     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        sh 'which node'
+        sh 'node -v'
+        sh 'npm install --verbose'
       }
     }
      
@@ -23,19 +25,19 @@ pipeline {
         sh 'npm run coverage --verbose'
       }
     }
-    stage('sonar-scanner') {
-    steps {
-      script {
-      def sonarqubeScannerHome = tool name: 'sonartool', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-      withCredentials([string(credentialsId: 'sonartoken', variable: 'sonarLogin')]) {
-        sh "ls -ltr"
-        sh "node -v"
-        sh "which node"
-        sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=react-demo -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=RDemo -Dsonar.sources=/src/ -Dsonar.tests=/src/coverage/ -Dsonar.language=javascript -Dsonar.javascript.lcov.reportPaths=/coverage/clover.xml"
-        }   
-      }
-    }
-    }
+    // stage('sonar-scanner') {
+    // steps {
+    //   script {
+    //   def sonarqubeScannerHome = tool name: 'sonartool', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+    //   withCredentials([string(credentialsId: 'sonartoken', variable: 'sonarLogin')]) {
+    //     sh "ls -ltr"
+    //     sh "node -v"
+    //     sh "which node"
+    //     sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=react-demo -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=RDemo -Dsonar.sources=/src/ -Dsonar.tests=/src/coverage/ -Dsonar.language=javascript -Dsonar.javascript.lcov.reportPaths=/coverage/clover.xml"
+    //     }   
+    //   }
+    // }
+    // }
     
     stage('Building image') {
       steps{

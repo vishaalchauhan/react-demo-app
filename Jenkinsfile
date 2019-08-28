@@ -29,7 +29,8 @@ pipeline {
       def sonarqubeScannerHome = tool name: 'sonartool', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
       withCredentials([string(credentialsId: 'sonartoken', variable: 'sonarLogin')]) {
         sh "ls -ltr"
-        sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://localhost:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=react-demo -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=RDemo -Dsonar.sources=/src/ -Dsonar.tests=/src/coverage/ -Dsonar.language=javascript -Dsonar.javascript.lcov.reportPaths=/coverage/clover.xml"
+        sh "node -v"
+        sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://localhost:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=react-demo -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=RDemo -Dsonar.sources=/src/ -Dsonar.tests=/src/coverage/ -Dsonar.language=javascript -Dsonar.javascript.lcov.reportPaths=/coverage/clover.xml -Dsonar.nodejs.executable=node"
         }   
       }
     }

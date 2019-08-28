@@ -33,7 +33,7 @@ pipeline {
         sh "ls -ltr"
         sh "node -v"
         sh "which node"
-        sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=react-demo -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=RDemo -Dsonar.sources=src/ -Dsonar.tests=coverage/ -Dsonar.language=javascript -Dsonar.javascript.lcov.reportPaths=coverage/clover.xml"
+        sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=react-demo -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=RDemo -Dsonar.sources=src/ -Dsonar.tests=coverage/ -Dsonar.language=js -Dsonar.javascript.lcov.reportPaths=coverage/clover.xml"
         }   
       }
     }

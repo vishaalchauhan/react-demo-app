@@ -1,0 +1,29 @@
+version: '3'
+services:
+  sonarqube:
+    ports:
+      - 9000:9000
+      - 9092:9092
+    container_name: sonarqube
+    image: sonarqube:6.7-alpine
+    networks:
+      - jenkins
+    volumes:
+      - ./sonarqube_conf:/opt/sonarqube/conf
+      - ./sonarqube_data:/opt/sonarqube/data
+      - ./sonarqube_extensions:/opt/sonarqube/extensions
+  jenkins:
+    image: nishant002/jenk-docker:v1
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    networks:
+      - jenkins
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - sonarqube  
+networks:
+  jenkins:

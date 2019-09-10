@@ -88,3 +88,9 @@ typings/
 .dynamodb/
 
 dist/
+
+# Docker volumes sync directories
+jenkins_home/
+sonarqube_conf/
+sonarqube_data/
+sonarqube_extensions/

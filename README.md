@@ -58,7 +58,7 @@ npm run coverage
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/mskhirwar/express-webpack/issues). hello
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/mskhirwar/express-webpack/issues).
 
 ## Show your support
 
